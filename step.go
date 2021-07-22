@@ -297,10 +297,6 @@ func main() {
 		logFail("Failed to export %s, error: %#v", installrAppDeployStatusKey, err)
 	}
 
-	if err := exportEnvironmentWithEnvman(installrAppDeployBuildURLKey, responseBuildUrl); err != nil {
-		logFail("Failed to export %s, error: %#v", installrAppDeployBuildURLKey, err)
-	}
-
 	if err := exportEnvironmentWithEnvman(installrAppDeployJson, string(contents)); err != nil {
 		logFail("Failed to export %s, error: %#v", installrAppDeployJson, err)
 	}
